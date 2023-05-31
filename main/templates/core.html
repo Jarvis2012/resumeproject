@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{%load static %}
+{% block content %}
+<div class="mt-5">
+  <div class='text-center'>
+    <img src="{% static 'img/uj.jpg' %}" alt="profile" 
+    class="img-thumbnail" width="200px" height="150" > 
+</div>
+  <div class="mt-5 text-white mx-5 text-justify ">
+    <h1 class="font-weight-bold sf-font"> Hello </h1>
+    <div class="px-4" style="line-height: 2rem;">
+         <p style="text-indent:100px;"> I am <b class="text-warning">Udit jadhav</b> i was born and brought up in indore
+         i have done bachelor's degree in computer application from MGU bhopal.
+          And other then this, I have completed some of the certification courses in C, C++, and Python programming  languages.
+          </p>
+          <p>
+          I belong to a nuclear family. My father is businessman and my mother is housewife. My strengths are i am hardworking, 
+          self-motivated. </p>
+          <p> I have strong communication skills and always eager to learn new things.
+           My hobbies are swimming, drawing. My goal is to get placed in a reputated company where  i can improve my skills to build my career and  contribute to organization growth.
+
+    
+      </p> 
+    
+    </div>   
+ </div>
+ <div>
+ <div class="text-center ">
+  <a href="{% url 'skills' %}" class="btn btn-outline-warning my-3 ">Hire me</a> 
+  <a href="{% url 'mycontact' %}" class="btn btn-outline-info my-5 mx-3 ">Contact Me</a> 
+ </div>
+</div>
+{% endblock content %}   

@@ -1,0 +1,23 @@
+
+.sf-font {
+    font-family: 'Satisfy', cursive;}
+html,body {
+    height: 100%;
+}    
+.container-fluid {
+   min-height:100%;
+}
+.color{
+    color:gold;
+}
+.sub{
+    color: silver;
+}
+a.nav-link.mt-2:hover{
+    color:black;
+    background-color: orange;
+}
+a.nav-link.mt-2.active{
+    background-color: red;
+    color: white;
+}

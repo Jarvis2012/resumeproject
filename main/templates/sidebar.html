@@ -1,0 +1,15 @@
+{% load static %}
+<div class="border-right border-warning h-100">
+ <div class="text-center">
+        <img src="{% static 'img/uj.jpg'%}" alt="profile" 
+        class="img-fluid rounded-square mt-5" width="120px" height="120">
+        <h2 class="text-white mt-5 sf-font">Udit Jadhav</h2>
+ </div>
+      <hr class="border-light">
+     <nav class="flex-column text-center text-white ">
+            <a href="{% url 'home' %}" class="nav-link mt-2 {{home}}">Home</a>
+            <a href="{% url 'services' %}" class="nav-link mt-2 {{service}}">Services</a>
+            <a href="{% url 'skills' %}" class="nav-link mt-2 {{skills}}">Skills</a>
+            <a href="{% url 'mycontact' %}" class="nav-link mt-2 {{contact}}">Contact us</a>
+    </nav> 
+</div>  

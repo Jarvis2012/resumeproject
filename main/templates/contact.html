@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-3">
+    <h1 class="text-warning mb-5 border-bottom">Contact Me</h1>
+    <div class="row text-white text-center ">
+     <p class="mx-auto mb-5 ">
+       For more information please contact me on given details !
+     </p>  
+     <div class="col-sm-9 mb-5">
+        <form action="{% url 'saved' %}" method="POST">
+            {% csrf_token %}
+            {% for msg in messages %}
+              <!-- {% if msg.tags %} <p class="alert alert-success text-center">{{msg.tags}}</p> {% endif %} -->
+             <p class="alert alert-danger text-center">{{msg}}</p>
+            {% endfor %}
+            <div class="form-row">
+                <div class="form-group col-md-6"></div>
+                  <label for="inputname">Your Name</label>
+                  <input type="text" class="form-control"
+                  id="inputname" required name="name"/>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6"></div>
+                  <label for="inputEmail">Your Email</label>
+                  <input type="email" class="form-control"
+                  id="inputEmail" required name="email"/>
+            </div>
+            <div class="mb-3 mt-3">
+                <div class="form-group col-md-6"></div>
+                  <label for="inputmessage">Your Message</label>
+                  <textarea class="form-control" 
+                  id="inputmessage" required name="message"></textarea>
+            </div>
+           <input class="btn btn-primary" type="submit" value="submit">
+            </div>
+            
+        </form>
+        <div class="col-sm-3 text-center">
+            <ul class="list-unstyled">
+                <li >
+                    <i class="fa-solid fa-location-dot fa-2x color "></i>
+                    <p> Indore, MP, India</p>
+                </li>
+                <li class="my-5">
+                    <i class="fa-solid fa-phone fa-2x color"></i>
+                        <p>+916263668859</p>
+                </li>
+                <li class="my-5"> 
+                    <a href="https://www.linkedin.com/in/udit-jadhav-63674922a/" target="_blank" ><i class="fa-brands fa-linkedin fa-2x color"></i></a>
+                    <p>Udit jadhav</p>
+                </li>
+                <li class="my-5">
+                   <a href="" target="blank"><i class="fa-solid fa-envelope  fa-2x color"></i></a>
+                    <p> uditjadhav07@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+
+     </div> 
+    </div>    
+</div>
+<div class="text-center mb-3">
+    <a href="https://instagram.com/jarvis_j7?igshid=NGExMmI2YTkyZg==" target="blank"><i class="fa-brands fa-instagram fa-2x color"></i></a>
+    <a class="mx-3" href="https://www.facebook.com/udit.jadhav.507" target="blank"><i class="fa-brands fa-facebook fa-2x color"></i></a>
+</div>
+{% endblock %}    
